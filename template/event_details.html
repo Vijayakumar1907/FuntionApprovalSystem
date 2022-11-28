@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -28,9 +31,9 @@
 
 
             <div class="sidebar">
-                <a class="active" href="#home"><i style="margin-right: 8px;" class="fa-solid fa-house"></i>Home</a>
-                <a href="../template/event_details.html"><i style="margin-right: 8px;"
-                        class="fa-solid fa-list"></i>Event Details</a>
+                <a href="/dashboard"><i style="margin-right: 8px;" class="fa-solid fa-house"></i>Home</a>
+                <a class="active" href="/event"><i style="margin-right: 8px;" class="fa-solid fa-list"></i>Event
+                    Details</a>
             </div>
 
 
@@ -39,11 +42,14 @@
 
         <div class="details_container">
             <div class="top_header">
-                <p>COMPUTER SCIENCE ENGINEERING</p>
-                <button class="logout_btn">Logout</button>
+                <p>{{account[1]}}</p>
+                <div class="btns_container">
+                    <a href="/add_event"><button class="logout_btn">Add event</button></a>
+                    <a href="/logout"><button class="logout_btn">Logout</button></a>
+                </div>
             </div>
             <div class="inner_details_container">
-                <p>fuck y!</p>
+                <p>doce</p>
             </div>
         </div>
     </div>

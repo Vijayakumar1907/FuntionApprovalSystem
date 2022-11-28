@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<!-- 
+    <!-- 
     <div class="outer-box">
         <div class="image-box">
             <p class="title-login">FUNCTION APPROVAL SYSTEM</p>
@@ -46,11 +46,17 @@
             </div>
         </div>
         <div class="container__formContainer">
-            <form action="/login" class="form">
+            <form action="/login" class="form" method="POST" enctype="multipart/form-data">
                 <h2 class="form__title">Sign In</h2>
                 <div class="form__inputContainer">
-                    <label for="dept">Department</label>
-                    <input id="department" type="text" class="user__input" name="dept">
+                    <label for="department">Department</label>
+                    <select class="user__input" id="department" name="department">
+                        {% for j in data %}
+                        <option value={{j[0]}}>{{j[0]}}</option>
+                        {% endfor %}
+
+                    </select>
+                    <!-- <input id="department" type="text" class="user__input" name="dept"> -->
                 </div>
                 <div class="form__inputContainer">
                     <label for="password">Password</label>
@@ -60,6 +66,8 @@
                 <!-- <input class="btn btn--secondary" type="submit" value="Login to Dashboard"> -->
                 <a href="dashboard.html">go to dashboard</a>
             </form>
+
+            <p>{{msg}}</p>
         </div>
     </div>
     </div>
